@@ -33,7 +33,7 @@ function App() {
   return (
     <div className="appContainer">
       <section className="hiddenLeft">
-        <img src="/assets/unnamed.png" alt="Me" className="imageProfile"/>
+        <img src="./assets/unnamed.png" alt="Me" className="imageProfile"/>
         <h1 className="titleText mainTitle"><q>Hello, my name is <span>Daniel Delchev</span> &#9996;</q></h1>
         <p>Full Stack Developer</p>
       </section>
@@ -41,10 +41,10 @@ function App() {
       <section className="hiddenRight">
         <h1 className="titleText technologiesTitle">Technologies</h1>
         <div className="imagesTechContainer">
-          <div className="imageContainer"><img src="/assets/jsLogo.png" alt="JS" className="imageTech"/></div>
-          <div className="imageContainer"><img src="/assets/mongodbLogo.png" alt="Mongo" className="imageTech"/></div>
-          <div className="imageContainer"><img src="/assets/nodejsLogo.png" alt="Node" className="imageTech"/></div>
-          <div className="imageContainer"><img src="/assets/reactLogo.png" alt="React" className="imageTech"/></div>
+          <div className="imageContainer"><img src="./assets/jsLogo.png" alt="JS" className="imageTech"/></div>
+          <div className="imageContainer"><img src="./assets/mongodbLogo.png" alt="Mongo" className="imageTech"/></div>
+          <div className="imageContainer"><img src="./assets/nodejsLogo.png" alt="Node" className="imageTech"/></div>
+          <div className="imageContainer"><img src="./assets/reactLogo.png" alt="React" className="imageTech"/></div>
         </div>
       </section>
 
@@ -52,7 +52,7 @@ function App() {
         <h1 className="titleText projectsTitle">Projects...</h1>
         <div className="projectContainer">
           <div className="projectImageContainer">
-            <div><img src="/assets/resourceX.png" alt="resouceX" className="projectImage"/></div>
+            <div><img src="./assets/resourceX.png" alt="resouceX" className="projectImage"/></div>
             <a className="projectButton" href="https://www.resourcex.net/">Click Me</a>
           </div>
           <div className="projectDescriptionContainer">
@@ -61,7 +61,7 @@ function App() {
         </div>
         <div className="projectContainer">
           <div className="projectImageContainer">
-            <div><img src="/assets/resourceX.png" alt="resouceX" className="projectImage"/></div>
+            <div><img src="./assets/resourceX.png" alt="resouceX" className="projectImage"/></div>
             <a className="projectButton" href="https://www.resourcex.net/">Click Me</a>
           </div>
           <div className="projectDescriptionContainer">
@@ -116,9 +116,9 @@ function App() {
         <div className="contactContainerMain">
           <h1 className="titleText reachmeText">Reach <span>ME &#128073;</span></h1>
           <div className="contactImagesContainer">
-            <div onClick={() => window.location.href = "https://www.facebook.com/profile.php?id=100003143973501"} className="imageContainerContact"><img src="/assets/facebook.png" alt="" /></div>
-            <div onClick={() => window.location.href = "https://github.com/DanielDelchev1301"} className="imageContainerContact"><img src="/assets/github.png" alt="" /></div>
-            <div onClick={() => window.location.href = "https://www.linkedin.com/in/daniel-delchev-a135b923b/"} className="imageContainerContact"><img src="/assets/linkedin.png" alt="" /></div>
+            <div onClick={() => window.location.href = "https://www.facebook.com/profile.php?id=100003143973501"} className="imageContainerContact"><img src="./assets/facebook.png" alt="" /></div>
+            <div onClick={() => window.location.href = "https://github.com/DanielDelchev1301"} className="imageContainerContact"><img src="./assets/github.png" alt="" /></div>
+            <div onClick={() => window.location.href = "https://www.linkedin.com/in/daniel-delchev-a135b923b/"} className="imageContainerContact"><img src="./assets/linkedin.png" alt="" /></div>
           </div>
         </div>
       </section>
