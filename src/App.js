@@ -56,16 +56,7 @@ function App() {
             <a className="projectButton" href="https://www.resourcex.net/">Click Me</a>
           </div>
           <div className="projectDescriptionContainer">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem dolorem obcaecati veritatis omnis itaque ipsum laboriosam repellendus voluptatibus aspernatur delectus, adipisci doloremque enim nesciunt ad nisi qui laborum quod. Repellendus voluptates quidem, quis doloremque qui vero fugiat ipsam eveniet aliquid nulla et excepturi tenetur molestias maiores obcaecati, commodi laudantium accusamus.</p>
-          </div>
-        </div>
-        <div className="projectContainer">
-          <div className="projectImageContainer">
-            <div><img src="./assets/resourceX.png" alt="resouceX" className="projectImage"/></div>
-            <a className="projectButton" href="https://www.resourcex.net/">Click Me</a>
-          </div>
-          <div className="projectDescriptionContainer">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem dolorem obcaecati veritatis omnis itaque ipsum laboriosam repellendus voluptatibus aspernatur delectus, adipisci doloremque enim nesciunt ad nisi qui laborum quod. Repellendus voluptates quidem, quis doloremque qui vero fugiat ipsam eveniet aliquid nulla et excepturi tenetur molestias maiores obcaecati, commodi laudantium accusamus.</p>
+            <p>To enable the compelling journey toward a better future by reprogramming your organization. To empower change agents to be ambitious to tackle society's biggest challenges unencumbered by resource scarcity</p>
           </div>
         </div>
       </section>
