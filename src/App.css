@@ -1,38 +1,383 @@
-.App {
-  text-align: center;
+body {
+    margin: 0;
+    font-family: 'Anonymous Pro', monospace;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sound {
+    display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.appContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    background-image: url('../public/assets/stars.webp');
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.hiddenLeft, .hiddenRight {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: 0 50px;
+    width: auto;
+    min-height: 120vh;
+    color: white;
+    opacity: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.showLeft {
+    animation: showContentLeft 3s ease-in-out;
+    opacity: 1;
+
+    .mainTitle, .projectDescriptionContainer {
+        animation: showText 3s ease-in-out;
+        opacity: 1;
+    }
+
+    .projectImageContainer {
+        animation: showProjectContent 3s ease-in-out;
+        opacity: 1;
+    }
+
+    .projectsTitle {
+        overflow: hidden;
+        border-right: 3px solid rgba(255,255,255,.75);
+        animation: blinkTextCursor 500ms steps(22) infinite normal,
+        typewriter 4s steps(15) 1s 1 normal both;
+    }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes showProjectContent {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes showText {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.showRight {
+    animation: showContentRight 3s ease-in-out;
+    opacity: 1;
+
+    .technologiesTitle {
+        overflow: hidden;
+        border-right: 3px solid rgba(255,255,255,.75);
+        animation: blinkTextCursor 500ms steps(22) infinite normal,
+        typewriter 4s steps(15) 1s 1 normal both;
+    }
+}
+
+@keyframes typewriter{
+    0% { 
+        width: 0;
+    }
+    50% {
+        width: 0;
+    }
+    100% {
+        width: 235px;
+    }
+}
+
+@keyframes blinkTextCursor{
+    0% {
+        border-right-color: rgba(255,255,255,.75);
+    }
+    100% {
+        border-right-color: transparent;
+    }
+}
+
+@keyframes showContentLeft {
+    0% {
+        transform: translateY(-100px);
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(50px);
+        transform: translateX(50px);
+    }
+    100% {
+        transform: translateY(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes showContentRight {
+    0% {
+        transform: translateY(100px);
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(-50px);
+        transform: translateX(-50px);
+    }
+    100% {
+        transform: translateY(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.titleText, .titleTextEmail {
+    font-size: 35px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.imageProfile {
+    max-width: 30%;
+    max-height: 50%;
+    border-radius: 50%;
+    border: 3px solid rgb(16, 181, 252);
+    transition: transform 1s ease-in-out;
+    opacity: 0.7;
+}
+
+.imageProfile:hover {
+    transform: rotate(360deg) scale(1.4);
+    animation: styleImage 1s ease-in-out both;
+    opacity: 1;
+}
+
+@keyframes styleImage {
+    0% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.imagesTechContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.imageContainer {
+    margin: 10px;
+    width: 240px;
+    height: 210px;
+}
+
+.imageTech {
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.imageTech:hover {
+    transform: scale(1.1) skew(2deg) translateY(-20px);
+    box-shadow: 0px 5px 5px 5px rgb(16, 181, 252);
+}
+
+.projectContainer {
+    display: flex;
+    border: 1px solid rgb(16, 181, 252);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.projectImageContainer {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    flex: 1;
+    margin: 20px;
+}
+
+.projectImage {
+    border-radius: 10px;
+}
+
+.projectButton {
+    margin: 10px;
+    padding: 10px;
+    width: 50%;
+    font-size: 15px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.projectButton:hover {
+    color: rgb(16, 181, 252);
+    border: 2px solid rgb(16, 181, 252);
+    box-shadow: 0px 1px 1px 1px white;
+}
+
+.projectDescriptionContainer {
+    flex: 2;
+    margin: 20px;
+    align-self: center;
+}
+
+.emailContainerMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+
+.titleTextEmail {
+    flex: 2;
+}
+
+span {
+    color: rgb(16, 181, 252);
+}
+
+.emailContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+}
+
+.input {
+    font-size: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.textarea {
+    font-size: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.emailButton {
+    font-size: 20px;
+    width: 40%;
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid rgb(16, 181, 252);
+    color: rgb(16, 181, 252);
+    cursor: pointer;
+}
+
+.emailButton:hover {
+    background-color: rgb(16, 181, 252);
+    border: 2px solid white;
+    color: white;
+}
+
+.titleTextEmail {
+    animation: waveText 2s ease-in-out infinite;
+}
+
+@keyframes waveText {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.contactContainerMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contactImagesContainer {
+    display: flex;
+    justify-content: center;
+    margin: 100px;
+}
+
+.imageContainerContact {
+    width: 15%;
+    margin: 10px;
+}
+
+.imageContainerContact:hover {
+    cursor: pointer;
+}
+
+.imageContainerContact img {
+    width: 100%;
+    transition: transform 300ms ease-in-out;
+}
+
+.imageContainerContact img:hover {
+    transform: scale(1.2);
+}
+
+.reachmeText {
+    animation: rotateText 6s ease-in-out 2s infinite;
+}
+
+@keyframes rotateText {
+    0%, 10% {
+        transform: rotate(0deg);
+    }
+    20%, 30% {
+        transform: rotate(130deg);
+    }
+    40%, 50% {
+        transform: rotate(90deg);
+    }
+    60%, 70% {
+        transform: rotate(50deg);
+    }
+    80%, 100% {
+        transform: rotate(0deg);
+    }
+}
+
+@media (max-width: 800px) {
+    .projectContainer {
+        flex-direction: column;
+    }
+    
+    .imageContainerContact {
+        width: 25%;
+    }
+}
+
+@media (max-width: 1600px) {
+    .emailContainerMain {
+        flex-direction: column;
+    }
 }
