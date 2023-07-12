@@ -35,7 +35,7 @@ function App() {
       <section className="hiddenLeft">
         <img src="./assets/unnamed.png" alt="Me" className="imageProfile"/>
         <h1 className="titleText mainTitle"><q>Hello, my name is <span>Daniel Delchev</span> &#9996;</q></h1>
-        <p>Full Stack Developer</p>
+        <p>I'm Full Stack Developer</p>
       </section>
 
       <section className="hiddenRight">

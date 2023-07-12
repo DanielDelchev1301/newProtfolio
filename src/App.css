@@ -100,7 +100,7 @@ body {
         width: 0;
     }
     100% {
-        width: 235px;
+        width: 250px;
     }
 }
 
@@ -373,6 +373,12 @@ span {
     
     .imageContainerContact {
         width: 25%;
+    }
+}
+
+@media (max-width: 600px) { 
+    .imageContainerContact {
+        width: 33%;
     }
 }
 
