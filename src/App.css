@@ -371,6 +371,10 @@ span {
     .projectContainer {
         flex-direction: column;
     }
+
+    .contactImagesContainer {
+        margin: 50px;
+    }
     
     .imageContainerContact {
         width: 30%;
