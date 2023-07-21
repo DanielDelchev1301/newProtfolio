@@ -249,6 +249,7 @@ p {
 
 .emailContainerMain {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 70%;
@@ -372,18 +373,12 @@ span {
     }
     
     .imageContainerContact {
-        width: 25%;
+        width: 30%;
     }
 }
 
 @media (max-width: 600px) { 
     .imageContainerContact {
-        width: 33%;
-    }
-}
-
-@media (max-width: 1600px) {
-    .emailContainerMain {
-        flex-direction: column;
+        width: 40%;
     }
 }
